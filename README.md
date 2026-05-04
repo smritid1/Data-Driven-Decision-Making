@@ -38,16 +38,19 @@ This project contains a SQL database schema for a **Film Rental Service System**
 The script includes:
 
 -- Find invalid actor references
+
 SELECT actor_id
 FROM actsin
 WHERE actor_id NOT IN (SELECT actor_id FROM actors);
 
 -- Find invalid movie references
+
 SELECT movie_id
 FROM actsin
 WHERE movie_id NOT IN (SELECT movie_id FROM movies
 
 ## Maintenance
+
 -- Disable safe updates
 SET SQL_SAFE_UPDATES = 0;
 
